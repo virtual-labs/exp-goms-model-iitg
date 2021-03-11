@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>GOMS Model</title>
+<style type="text/css">
+div{border: 1px solid #000000;
+background-color:white;
+width: 100px;
+height: 30px;
+}
+select{
+background-color:#e2e7ec;
+font-family: ariel;
+width: 200px;
+font-size : 18px;
+ border-radius: 4px;
+}
+button{
+display: inline-block;
+border-radius: .10em;
+font-family:georgia;
+font-size : 15px;
+width: 100px;
+height: 30px;
+}
+input[type=radio] {
+    margin:10px;
+}
+</style>
+<script type="text/javascript">
+var count1=0;
+var count2=0;
+function timer1(){
+count1++;
+document.getElementById("ms1").innerHTML = count1;
+}
+function reset1(){
+document.getElementById("ms1").innerHTML=0;
+}
+function timer2(){
+count2++;
+document.getElementById("ms2").innerHTML = count2;
+}
+function reset2(){
+document.getElementById("ms2").innerHTML=0;
+}
+</script>
+</head>
+<body>
+<table width=100% height=800 bgcolor=#d9e0e6>
+<tr><td colspan="2"><font color=#970707 size=5><b>Rate your understanding on a ten point scale for the subjects given below:</b></td>
+<td><div id="ms1"></div><font color=red><b>ms</b></td></tr>
+<tr><td><font size=4 face="times romman">Physics</td><td align="middle"><select id="p1">
+        <option value="s1">Choose from Below</option>
+        <script type="text/javascript">
+   for(var i=1;i<11;i++)
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+   </script>
+        </select></td><td><button onClick="myTimer1=setInterval(timer1, 10)">Start</button></td></tr>
+<tr><td><font size=4 face="times romman">Chemistry</td><td align="middle"><select id="c1">
+        <option value="s2">Choose from Below</option>
+        <script type="text/javascript">
+   for(var i=1;i<11;i++)
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+   </script>
+        </select></td><td></td></tr>
+<tr><td><font size=4 face="times romman">Mathematics</td><td align="middle"><select id="m1">
+        <option value="s3">Choose from Below</option>
+        <script type="text/javascript">
+   for(var i=1;i<11;i++)
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+   </script>
+        </select></td><td></td></tr>
+<tr><td><font size=4 face="times romman">Biology</td><td align="middle"><select id="b1">
+        <option value="s4">Choose from Below</option>
+        <script type="text/javascript">
+   for(var i=1;i<11;i++)
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+   </script>
+        </select></td><td><button onClick="reset1()">Reset</button></td></tr>
+<tr><td><font size=4 face="times romman">History</td><td align="middle"><select id="h1">
+        <option value="s5">Choose from Below</option>
+        <script type="text/javascript">
+   for(var i=1;i<11;i++)
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+   </script>
+        </select></td><td></td></tr>
+<tr><td><font size=4 face="times romman">Geography</td><td align="middle"><select id="g1">
+        <option value="s6">Choose from Below</option>
+        <script type="text/javascript">
+   for(var i=1;i<11;i++)
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+   </script>
+        </select></td><td></td></tr>
+<tr><td><font size=4 face="times romman">Economics</td><td align="middle"><select id="e1">
+        <option value="s7">Choose from Below</option>
+        <script type="text/javascript">
+   for(var i=1;i<11;i++)
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+   </script>
+        </select></td><td><button onClick="clearInterval(myTimer1)">Stop</button></td></tr>
+<tr bgcolor="black" height=2><td colspan=4></td></tr>
+<tr><td colspan="2"><font color=#970707 size=5><b>Rate your understanding on a ten point scale for the subjects given below:</b></td>
+<td><div id="ms2"></div><font color=red><b>ms</b></td></tr>
+<tr><td><font size=4 face="times romman">Physics</td><td align="center">
+<script type="text/javascript">
+	for(var i=1;i<11;i++)
+	document.write(i+"<input type='radio' name='p1' value="+i+">&nbsp;&nbsp;");
+</script>
+</td><td><button onClick="myTimer2=setInterval(timer2, 10)">Start</button></td></tr>
+<tr><td><font size=4 face="times romman">Chemistry</td><td align="center">
+<script type="text/javascript">
+	for(var i=1;i<11;i++)
+	document.write(i+"<input type='radio' name='c1' value="+i+">&nbsp;&nbsp;");
+</script></td><td></td></tr>
+<tr><td><font size=4 face="times romman">Mathematics</td><td align="center">
+<script type="text/javascript">
+	for(var i=1;i<11;i++)
+	document.write(i+"<input type='radio' name='m1' value="+i+">&nbsp;&nbsp;");
+</script></td><td></td></tr>
+<tr><td><font size=4 face="times romman">Biology</td><td align="center">
+<script type="text/javascript">
+	for(var i=1;i<11;i++)
+	document.write(i+"<input type='radio' name='b1' value="+i+">&nbsp;&nbsp;");
+</script></td><td><button onClick="reset2()">Reset</button></td></tr>
+<tr><td><font size=4 face="times romman">History</td><td align="center">
+<script type="text/javascript">
+	for(var i=1;i<11;i++)
+	document.write(i+"<input type='radio' name='h1' value="+i+">&nbsp;&nbsp;");
+</script></td><td></td></tr>
+<tr><td><font size=4 face="times romman">Geography</td><td align="center">
+<script type="text/javascript">
+	for(var i=1;i<11;i++)
+	document.write(i+"<input type='radio' name='g1' value="+i+">&nbsp;&nbsp;");
+</script></td><td></td></tr>
+<tr><td><font size=4 face="times romman">Economics</td><td align="center">
+<script type="text/javascript">
+	for(var i=1;i<11;i++)
+	document.write(i+"<input type='radio' name='e1' value="+i+">&nbsp;&nbsp;");
+</script></td><td><button onClick="clearInterval(myTimer2)">Stop</button></td></tr>
+</table>
+</body>
+</html>
